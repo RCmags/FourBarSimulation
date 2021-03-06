@@ -7,3 +7,6 @@ The output is a canvas animation of the linkage mechanism rotating under the abs
 
 Here are some examples of the script's output:
 
+<img src = "example_pics/short_bar_anim.gif" width = "35%" height = "35%"> <img src = "example_pics/short_graph.png" width = "35%" height = "35%">
+
+<img src = "example_pics/long_bar_anim.gif" width = "35%" height = "35%"> <img src = "example_pics/long_graph.png" width = "35%" height = "35%">
