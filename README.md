@@ -1,4 +1,4 @@
-# Four bar linkage Simulation :chart_with_upwards_trend: :triangular_ruler:
+# Four bar linkage simulation :chart_with_upwards_trend: :triangular_ruler:
 This is a simple 2D simulation of a four bar linkage written in __python 3__. 
 
 ## What it simulates
