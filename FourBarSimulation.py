@@ -40,7 +40,7 @@ X_BOUND = 1.5
 Y_BOUND = 1.1
 
 # Save animation as .gif 
-SAVE_FIGURE = False         # True or False
+SAVE_FIGURE = True       # True or False
 
 #--- Output angle function:
 
@@ -183,6 +183,8 @@ stateVector_solution = odeint(stateVector_deriv, stateVector_initial, time_array
 
 
 #--- Creating figure for plot
+
+# 1. animation
 figure = plt.figure() 
 axes = plt.axes( xlim=(-X_BOUND, X_BOUND), ylim=( -Y_BOUND + A_HEIGHT*0.5,
                                                 Y_BOUND + A_HEIGHT*0.5 ) )
@@ -190,7 +192,15 @@ plt.xlabel("X position")
 plt.ylabel("Y position")
 plt.title("Four bar linkage")
 
+# 2. time plot
+figure1, axis1 = plt.subplots(nrows=1, ncols=1)
 
+angvel = stateVector_solution[:,1]	# i=0 : angle | i = 1: angvel
+axis1.plot( time_array, angvel )
+
+axis1.set_xlabel("Time parameter")
+axis1.set_ylabel("Angular velocity of crank (rad/time)")
+axis1.set_title("Angular Velocity vs Time")
 
 #--- Creating patch objects [ animation figures ]:
     
@@ -259,7 +269,10 @@ anim = animation.FuncAnimation( figure, animate_index, init_func = initial_plot,
 
 #--- Saving animation [Remove comment to enable]
 if SAVE_FIGURE:
-	anim.save("fourbar.gif", writer=animation.PillowWriter(fps=5), dpi=75)  
+	anim.save("figures/fourbar_anim.gif", writer=animation.PillowWriter(fps=5), dpi=75) 
+	figure1.savefig('figures/angvel_plot.jpg') 
 
-# display
-plt.show()
+# display figures
+figure1.show()
+plt.show()	
+

@@ -22,9 +22,9 @@ The script requires the following libraries:
 Here are examples of the output:
 
 <p align="center">
-<img src = "/images/short_bar_anim.gif" width = "35%" height = "35%"> <img src = "/images/short_graph.png" width = "35%" height = "35%">
+<img src = "/example_images/short_graph.png" width = "35%" height = "35%"> <img src = "/example_images/short_bar_anim.gif" width = "35%" height = "35%">
 </p>
 
 <p align="center">
-<img src = "/images/long_bar_anim.gif" width = "35%" height = "35%"> <img src = "/images/long_graph.png" width = "35%" height = "35%">
+<img src = "/example_images/long_graph.png" width = "35%" height = "35%"> <img src = "/example_images/long_bar_anim.gif" width = "35%" height = "35%">
 </p>
