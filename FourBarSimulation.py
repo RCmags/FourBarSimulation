@@ -30,13 +30,17 @@ INERTIA_R = 10
 # Time interval
 TIME_FINAL = 100
 TIME_STEPS = 400
+
 # Animation figures
 BAR_WIDTH = 3
 PIN_RADIUS = 0.05
+
 #Plot bounds
 X_BOUND = 1.5
 Y_BOUND = 1.1
 
+# Save animation as .gif 
+SAVE_FIGURE = False         # True or False
 
 #--- Output angle function:
 
@@ -251,7 +255,11 @@ def animate_index(i):
 
 #--- Generating animation
 anim = animation.FuncAnimation( figure, animate_index, init_func = initial_plot,
-                                 frames = TIME_STEPS, interval = 40, blit = True )
+                                 frames = TIME_STEPS, interval = 40, blit = True )                             
 
 #--- Saving animation [Remove comment to enable]
-#anim.save('FourBarAnimation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+if SAVE_FIGURE:
+	anim.save("fourbar.gif", writer=animation.PillowWriter(fps=5), dpi=75)  
+
+# display
+plt.show()
